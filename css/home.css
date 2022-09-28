@@ -1,0 +1,278 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+body {
+  background: #f7f7f7;
+  /* font-family: "Open Sans"; */
+  font-family: 'Antic Slab', serif;
+  /* text-align: center; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body .pen {
+  position: absolute;
+}
+body .pen h4 {
+  position: relative;
+  margin: 0 auto;
+  color: #333;
+  font-size: 3em;
+  font-weight: 600;
+}
+body .pen h4 span {
+  color: #66CC33;
+}
+
+
+
+/* CONTENT 1 */
+.container {
+  padding: 10px 0;
+}
+.scrolling-window {
+  border-radius: 10px;
+  display: block;
+  width: 300px;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #b3b3b3;
+  margin: 0 auto;
+}
+.scrolling-window img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  animation: fadeIn 1s;
+}
+.scrolling-window:hover img {
+  animation: scroll var(--animation-duration) cubic-bezier(0.5, 0, 0.5, 0)
+    infinite alternate;
+  animation-delay: 0.5s;
+}
+@keyframes scroll {
+  /* to stop for a moment while reversing the animation */
+  90% {
+    bottom: 0px;
+    top: var(--top);
+  }
+  100% {
+    bottom: 0px;
+    top: var(--top);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    top: -16px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+
+
+
+
+.btn{
+  background-color: #66CC33;
+  color: white;
+}
+
+main {
+  /* width: 100vw;
+  height: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scanner p {
+ color: transparent;
+ font-size: 1.4rem;
+ position: relative;
+ overflow: hidden;
+}
+
+.scanner p::before {
+ content: "Our_Program";
+ position: absolute;
+ /* top: 0;
+ left: 0;
+ width: 0; */
+ height: 100%;
+ border-right: 4px solid white;
+ overflow: hidden;
+ color: black;
+ animation: load 5s linear infinite;
+}
+
+@keyframes load {
+ 0%, 10%, 100% {
+  width: 0;
+ }
+
+ 10%,20%,30%,40%,50%,60%,70%,80%,90%,100% {
+  border-right-color: transparent;
+ }
+
+ 11%,21%,31%,41%,51%,61%,71%,81%,91% {
+  border-right-color: black;
+ }
+
+ 60%, 80% {
+  width: 100%;
+ }
+}
+
+
+.span_color{
+  color: #66CC33;
+}
+
+.d-inline-block{
+  color: #66CC33;
+}
+
+
+
+/* Dekstop */
+@media only screen and (min-width: 600px) {
+  .pen{
+  top: 30%;
+  left: 67%;
+  margin: -65px 0 0 -226px;
+}
+
+.section6 .nextcol {
+  text-align: right;
+  
+}
+
+#remove-dekstop{
+  display: none;
+ }
+
+
+}
+
+
+/* mobile */
+@media only screen and (max-width: 600px) {
+ .lead{
+  display: none;
+ }
+
+ #remove-mobile{
+  display: none;
+ }
+
+ .pen{
+  font-size: 8px;
+  top: 20%;
+  left: 40%;
+ }
+
+ .br_mobile{
+  display: none;
+ }
+  .fa-chevron-circle-right {
+    color: white;
+    transition-duration: 350ms;
+  }
+  .fa-chevron-circle-right:hover {
+    color: #0dffad;
+  }
+}
+ 
+
+.section6{
+  /* background-color: #e9ecef; */
+  text-align: justify;
+}
+
+/* Footer */
+.footer-basic {
+  padding: 40px 0;
+  color: #4b4c4d;
+}
+
+.footer-basic ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.footer-basic li {
+  padding: 0 10px;
+}
+
+.footer-basic ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity: 1;
+  color: #90ee90;
+}
+
+.footer-basic .social {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.footer-basic .social > a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity: 0.9;
+  color: #66CC33;
+}
+
+.footer-basic .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0;
+}
+
+
+
+
+
+#fa-color{
+  color: #4b4c4d;
+}
+
+
+
+
+
+.custom-control-input:checked~.custom-control-label::before {
+  color: #66CC33 !important;
+  border-color: #66CC33 !important;
+  background-color: #66CC33!important;
+}
+
